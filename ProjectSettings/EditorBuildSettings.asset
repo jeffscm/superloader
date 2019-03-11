@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/My Project/My Scenes/VR Game/LoadingScene.unity
+    guid: 4ed0318e4638b43e2bfb0d342bead073
+  - enabled: 1
+    path: Assets/My Project/My Scenes/VR Game/GamePlayScene.unity
+    guid: e12816721f78347b78bb89a2fbc4167b
   m_configObjects: {}
