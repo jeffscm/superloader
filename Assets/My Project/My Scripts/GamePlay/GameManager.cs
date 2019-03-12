@@ -1,11 +1,23 @@
-﻿using System.Collections;
+﻿// =====================================
+// Author: Jefferson Scomacao (2019)
+//
+// Progressive Async Scene Loading
+// using reactive code pattern
+//
+// Class GameLoaderService
+// Manages the GamePlay and loading
+// prefabs for the scene and after
+// hide de loading screen (this is on
+// of the ways to use async loading)
+// =====================================
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class GameLoaderService : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-
     public List<GameObject> listInitPrefabs;
     public float defaultDelay = 0.1f;
 
@@ -18,17 +30,14 @@ public class GameLoaderService : MonoBehaviour
     }
 
     void ExecuteDownloadStep()
-    {
-        Debug.Log("H2");
+    {      
         DownloadItem( () => {
-            Debug.Log("H3");
             Util.ExecuteAfter(defaultDelay, () => {
-                Debug.Log("H4");
                 ExecuteDownloadStep();
             });
         },
         () => {
-            Debug.Log("H5");
+           
             // Completed Event
             SceneLoaderService.HideLoader();
         });
@@ -38,6 +47,7 @@ public class GameLoaderService : MonoBehaviour
     {
         if (idx == listInitPrefabs.Count)
         {
+            SceneLoaderService.SetProgress(1f);
             onCompleted?.Invoke();
         }
         else

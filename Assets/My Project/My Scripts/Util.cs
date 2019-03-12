@@ -1,3 +1,13 @@
+// =====================================
+// Author: Jefferson Scomacao (2019)
+//
+// Progressive Async Scene Loading
+// using reactive code pattern
+//
+// Class Util
+// Utility to encapsulate LeanTween
+// =====================================
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
