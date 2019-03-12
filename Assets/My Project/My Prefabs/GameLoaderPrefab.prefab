@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2280551582651835757}
+  - component: {fileID: 9189318471975383682}
   m_Layer: 0
-  m_Name: GameLoader
+  m_Name: GameLoaderPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,3 +31,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9189318471975383682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2254467960430669733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b62a9220a8be84182a6e2e6c700df502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listInitPrefabs:
+  - {fileID: 324208825092170399, guid: 11f11a300ac4046ae8e5a50be0fc4ce2, type: 3}
+  defaultDelay: 0.1
